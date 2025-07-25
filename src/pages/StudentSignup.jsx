@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link} from 'react-router-dom';
 import styles from './StudentSignup.module.css';
 import { auth, db } from '../firebase/config';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
@@ -88,7 +88,14 @@ function StudentSignup() {
             required
           />
 
+
           <button type="submit" className={styles.btn}>Create Account</button>
+
+          
+             <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", margin: 5 }}>
+               <p>Already have an account? </p>
+               <Link to="/login/student">Login here</Link>
+              </div>
         </form>
       </div>
     </div>

@@ -11,6 +11,7 @@ import StudentDashboard from './pages/StudentDashboard'
 import AdminDashboard from './pages/AdminDashboard';
 import StudentRegister from './pages/StudentRegister';
 import TermsAndConditions from './pages/Terms';
+import ForgotPassword from './pages/ForgotPassword';
 
  
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/dashboard" element={<StudentDashboard />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/student-register" element={<StudentRegister />} />
+         <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
     </Router>
   );

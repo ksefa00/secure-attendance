@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import styles from './AdminLogin.module.css';
 import { auth } from '../firebase/config';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -51,6 +51,11 @@ function AdminLogin() {
             required
           />
 
+            <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", margin: 5 }}>
+         <p>Do not have an account? </p>
+         <Link to="/signup/admin">Register here</Link>
+        </div>
+
           <button type="submit" className={styles.btn}>
             {loading ? (
               <span
@@ -69,11 +74,9 @@ function AdminLogin() {
             )}
           </button>
 
-          <p style={{ marginTop: '1rem', textAlign: 'center' }}>
-            <a href="/reset-password" style={{ color: '#396291', textDecoration: 'underline' }}>
-              Forget Password?
-            </a>
-          </p>
+       <div style={{ display: "flex", flexDirection: "row", justifyContent:"center", margin: 10 }}>
+  <Link to="/forgot-password">Forgot password?</Link>
+</div>
         </form>
       </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './StudentRegister.module.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 function StudentRegister() {
   const [fullName, setFullName] = useState('');
@@ -53,7 +54,10 @@ function StudentRegister() {
         </select>
       </div>
 
+
       <button onClick={handleRegister}>Register</button>
+
+      
     </div>
   );
 }

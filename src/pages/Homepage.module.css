@@ -39,7 +39,7 @@
   margin: 60px auto 0;
   padding: 0 1rem;
   flex-direction: row;
-  max-width: 350px; /* ⬅️ Limit overall width */
+  max-width: 350px; 
   width: 100%;
 }
 

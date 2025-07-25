@@ -523,11 +523,7 @@ function AdminDashboard() {
               }}
             >
               <h3 style={{ marginBottom: '10px' }}>Check-in: {selectedCheckin.dateTime}</h3>
-              {selectedCheckin.data.latitude && selectedCheckin.data.longitude && (
-                <p>
-                  <strong>Location:</strong> {selectedCheckin.data.latitude}, {selectedCheckin.data.longitude} 
-                </p>
-              )}
+            
 
               {selectedCheckin.data.checkins?.length > 0 ? (
                 selectedCheckin.data.checkins.map((entry, idx) => (
